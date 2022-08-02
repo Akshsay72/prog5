@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="n1" id="n1" />
+    <button onclick="myfn1()">Click me1</button><br><br>
+    <button onclick="myfn2()">Click me2</button><br><br>
+    <input type="text" name="n2" id="n2">
+    <button onclick="myfn3()">Click me3</button>
+    <button onclick="myfn4()">Click me4</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <input type="text" name="m1" id="m1"/><br><br>
+    <input type="text" name="m2" id="m2"/><br><br>
+    <button onclick="gcd()">Click here</button>
+    <p id="p3"></p>
+
+    <script>
+        function myfn1(){
+            alert("Hello World");
+            let n1 = document.getElementById("n1").value;
+            alert(n1);
+        }
+        function myfn2(){
+            alert(Boolean(10 > 9));
+            let k = true,m = false;
+            if(k){
+                alert("Ok");
+            }else{
+                alert("Not Ok");
+            }
+            if(m){
+                alert("Ok");
+            }else{
+                alert("Not Ok");
+            }
+        }
+        function myfn3(){
+            let n2 = document.getElementById("n2").value;
+            if(n2 == null || n2 == "" || n2 == " "){
+                document.getElementById("p2").innerHTML = "<span style='color:red'> Did not write anything </span>";
+            }else{
+                document.getElementById("p1").innerHTML = n2;
+            }
+        }
+        function myfn4(){
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            s1 = Number(n1); s2 = Number(n2);
+            if(isNaN(n1) && isNaN(n2)){
+                document.getElementById("p1").innerHTML = NaN;
+            }else{
+                document.getElementById("p1").innerHTML = s1 + s2;
+            }            
+        }
+        
+    </script>
+</body>
+</html>
